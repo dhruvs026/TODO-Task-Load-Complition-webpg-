@@ -1,0 +1,145 @@
+/* Global & background */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  height: 100vh;
+  background: url('https://wallpaperaccess.com/full/2360244.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* App container */
+.app-container {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title */
+.app-container h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Progress section */
+.progress-bar-container {
+  position: relative;
+  display: flex; align-items: center; gap: 15px;
+}
+.progress-text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+.progress-wrapper {
+  flex: 1.5;
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #ff6f91;
+  transition: width 0.3s;
+}
+.progress-count {
+  background: #ff6f91;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Input section */
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.input-wrapper input {
+  flex: 1;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  padding: 12px 15px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1rem;
+}
+.input-wrapper input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.3);
+}
+.input-wrapper button {
+  background: #ff6f91;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.input-wrapper button:hover {
+  transform: scale(1.1);
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.task-item {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: background 0.2s;
+}
+.task-item:hover {
+  background: rgba(255,255,255,0.2);
+}
+.task-text {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.actions button {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.actions button:hover {
+  transform: scale(1.2);
+}
+.actions .edit { color: #ffd369; }
+.actions .delete { color: #ff5e5e; }

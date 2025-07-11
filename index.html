@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphic To-Do</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>To‑Do App</h1>
+    <div class="progress-bar-container">
+      <span class="progress-text">Keep it Up!</span>
+      <div class="progress-wrapper">
+        <div class="progress-bar"></div>
+      </div>
+      <span class="progress-count">0 / 0</span>
+    </div>
+    <div class="input-wrapper">
+      <input id="task-input" placeholder="Add a new task..." />
+      <button id="add-task"><i class="fas fa-plus"></i></button>
+    </div>
+    <ul class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
